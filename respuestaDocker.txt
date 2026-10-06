@@ -1,4 +1,21 @@
 // Responde a la pregunta sobre docker del enunciado
 
+docker run: crea e inicia un contenedor a partir de una imagen.
+
+-d: se ejecuta en segundo plano.
+
+-- name mi_web: Se le pone el nombre al contenedor, en este caso mi_web.
+
+-p 8080:80: Conecta el puerto 8080 de mi ordenador con el puerto 80 del contenedor.
+
+nginx: Indica que se va a utilizar la imagen Nginx para crear el contenedor.
+
+// Bibiografía
+
+La informacion sobre docker run, -d, --name mi_web y -p 8080:80 la he buscado en la documentacion oficial de docker.
+https://docs.docker.com/reference/cli/docker/container/run/ 
+
+La imagen utilizada en el comando es la imagen oficial de Nginx en Docker Hub.
+https://hub.docker.com/_/nginx 
 
 // Bibiografía
