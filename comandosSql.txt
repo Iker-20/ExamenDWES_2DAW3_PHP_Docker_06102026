@@ -1,1 +1,17 @@
 // Copia aquí todos los comandos que has usado para crear la base de datos.
+CREATE DATABASE IF NOT EXISTS CAE;
+
+USE CAE;
+
+CREATE TABLE SOLICITUD(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    apellidos VARCHAR(100) NOT NULL,
+    dni VARCHAR(9) NOT NULL,
+    f_nac DATE NOT NULL,
+    tlf VARCHAR(15) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    profesion VARCHAR(30) NOT NULL,
+    jornadaParcial BOOLEAN,
+    idiomas VARCHAR(50) NOT NULL
+);
