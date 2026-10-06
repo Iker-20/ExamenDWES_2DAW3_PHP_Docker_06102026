@@ -2,7 +2,7 @@
     <head>
         <title>Examen de Desarrollo web en entorno servidor</title>
         <link rel="stylesheet" type="text/css" href="../estilos/estilos.css">
-        <link rel="icon" type="image/png" sizes="32x32" href="../imagenes/favicon.jpeg">
+        <link rel="icon" type="image/jpeg" sizes="32x32" href="../imagenes/favicon.jpeg">
     </head>
     <body>
         <h1>Centro de Ayuda al Empleo</h1>
@@ -10,8 +10,64 @@
         <button onclick="location.href='../php/tabla.php?tipo=soldadura'">Soldadura</button>
         <button onclick="location.href='../php/tabla.php?tipo=informatica'">Informática</button>
         <button onclick="location.href='../php/tabla.php?tipo=socio'">Asistencia Sociosanitaria</button>
-        <form action="../php/tabla.php" method="???">
+        <form action="../php/tabla.php" method="post">
             <!-- Añade aquí todos los datos que te pido en el enunciado -->
+            <label>Nombre: </label>
+            <input type="text" name="nombre" required>
+
+            <br>
+
+            <label>Apellidos: </label>
+            <input type="text" name="apellidos" required>
+
+            <br>
+
+            <label>Dni: </label>
+            <input type="text" name="dni" required pattern="[0-9]{8}[A-Z]" title="Debe tener 8 numeros y 1 letra">
+
+            <br>
+
+            <label>Fecha Nacimiento: </label>
+            <input type="date" name="f_nac" required>
+
+            <br>
+
+            <label>Telefono: </label>
+            <input type="text" name="tlf" required pattern="[0-9]+" title="Debe introducir 9 numeros">
+
+            <br>
+
+            <label>Email: </label>
+            <input type="email" name="email" required title="Debe contener un @ o un . en su direccion de correo">
+
+            <br>
+
+            <label>Profesion: </label>
+            <input type="radio" name="profesion" value="soldadura">Soldadura
+
+            <input type="radio" name="profesion" value="informatica">Informática
+
+            <input type="radio" name="profesion" value="socio">Asistencia SocioSanitaria
+
+            <br>
+
+            <label>Jornada: </label>
+            <input type="radio" name="jornadaParcial" value="1"> Parcial
+
+            <br>
+
+            <input type="radio" name="jornadaParcial" value="0"> Completa
+
+            <br>
+
+            <label>Idioma: </label>
+            <input type="checkbox" name="euskera">Euskera
+
+            <br>
+
+            <input type="checkbox" name="ingles">Ingles
+
+            <input type="submit" value="Enviar solicitud">
         <form>
     </body>
 </html>
